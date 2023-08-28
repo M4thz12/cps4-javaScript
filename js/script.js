@@ -6,8 +6,14 @@ const botao = document.getElementById("Botao");
 const tabela = document.querySelector(".tabela-tarefas");
 const botaoImportancia = document.getElementById("BotaoImportancia");
 
+
+// Adiciona um evento de clique para o botão "Adicionar"
+botao.addEventListener("click",()=>{
+    adicionarTarefa()
+});
+
 // Função para adicionar uma tarefa ao array e à tabela
-const adicionarTarefa = () => {
+function adicionarTarefa(){
     const thead = tabela.querySelector("thead");
     thead.textContent = '';
 
@@ -115,8 +121,7 @@ function criarTabela() {
     });
 };
 
-// Adiciona um evento de clique para o botão "Adicionar"
-botao.addEventListener("click", adicionarTarefa);
+
 
 // Adiciona um evento de clique para o botão "Ordenar por Importância"
 botaoImportancia.addEventListener("click", () => {
